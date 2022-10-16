@@ -9,7 +9,9 @@
   <body>
     <div id="app">
       <p>{{ num }}</p>
+      <p>{{ name }}</p>
       <app-header v-bind:propsdata="num"></app-header>
+      <app-header2 v-bind:propsdata="name"></app-header2>
       <app-content v-on:pass="deliverNum"></app-content>
     </div>
 
@@ -19,12 +21,19 @@
         template: "<div>header {{ propsdata }}</div>",
         props: ['propsdata']
       };
+
+      var appHeader2 = {
+        template: "<div>header2 '{{ propsdata }}</div>",
+        props: ['propsdata']
+      };
+
       var appContent = {
         template:
           "<div>content<button v-on:click='passNum'>pass</button></div>",
         methods: {
           passNum: function () {
-            this.$emit('pass', 10);
+            
+            this.$emit('pass', 10, 'noah');
           },
         },
       };
@@ -33,14 +42,20 @@
         el: "#app",
         components: {
           "app-header": appHeader,
+          "app-header2" : appHeader2,
           "app-content": appContent,
         },
         data: {
-          num: 0
+          num: 0,
+          name : "",
         },
         methods: {
           deliverNum: function(value) {
             this.num = value;
+          },
+          deliverNum: function(num, name) {
+            this.num = num;
+            this.name = name;
           }
         }
       });

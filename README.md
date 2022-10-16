@@ -9,3 +9,20 @@
 **Copyright © 2021 Captain Pangyo**
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivs 4.0 Unported License</a>.
+
+## Extension.
+- Vetur
+- Vue Theme
+- Material Icon Theme
+- Live Server
+- ESLint
+- Prettier
+- Auto Close Tag
+
+## CDN 코드
+``` javascript 
+// vue js
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+// vue router (vue기반으로 작성 되었기에 CDN순서 주의)
+<script src="https://unpkg.com/vue-router@3.5.3/dist/vue-router.js"></script>
+```
