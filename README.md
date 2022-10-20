@@ -25,4 +25,10 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 // vue router (vue기반으로 작성 되었기에 CDN순서 주의)
 <script src="https://unpkg.com/vue-router@3.5.3/dist/vue-router.js"></script>
+// axios
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 ```
+
+## 테스트 서비스
+- json 데이터 샘플제공 해주는 사이트 
+    + https://jsonplaceholder.typicode.com
