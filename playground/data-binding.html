@@ -6,15 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <style>
+      .text-blue {
+        font: blue;
+      }
+  </style>
   <body>
     <div id="app">
+
       <p v-bind:id="uuid" v-bind:class="className">{{ num }}</p>
       <p>{{ doubleNum }}</p>
-      <div v-if="loading">Loading...</div>
-      <div v-else>text user has benn logged in</div>
-      <div v-show="loading">Loading...</div>
+
+      <!-- 프로그래밍 언어에서의 if-else구문과 동일한 역할 -->
+      <div v-if="loading">
+        Loading...
+      </div>
+      <div v-else>
+        text user has benn logged in
+      </div>
+      
+      <!-- DOM의 정보는 남아있다. display-none 설정되어 있음 -->
+      <div v-show="loading">
+        Loading...
+      </div>
+
       <input type="text" v-model="message" />
       <p>{{ message }}</p>
+
+      <input type="text" v-model="num2" />
+      <p>result : {{ result }}</p>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -27,13 +48,24 @@
           className: "text-blue",
           loading: true,
           message: "",
+          num2 : 0,
         },
         computed: {
           doubleNum: function () {
             return this.num * 2;
           },
+          result : function () {
+            return this.num2 * 2 + 1;
+          }
         },
       });
     </script>
   </body>
 </html>
+
+<!--
+  콧수염 괄호 (Mustache Tag)라고 부름
+  {{ doubleNum }}
+
+  computed
+-->
