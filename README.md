@@ -31,7 +31,7 @@
 
 ### CLI
 ``` sh
-# install (권한 문제 있는경우)
+# install (권한 문제 있는경우, Node 12.0.0 이상 버전 요구)
 (sudo) npm install -g @vue/cli
 # or
 (sudo) yarn global add @vue/cli
@@ -59,6 +59,17 @@ yarn global upgrade --latest @vue/cli
     n lts : lts 버전
     n x.x.x : 특정 x.x.x 버전
 5. 업데이트 확인
+    node -v
+```
+
+###  Node Version Update (Window)
+``` sh
+1. Scoop 설치 (PowerShell terminal)
+    > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
+    > irm get.scoop.sh | iex
+2. node.js 설치 (주의. 버전 관리가 되지 않고 기존 버전 업데이트)
+    scoop install nodejs
+3. 버전 확인
     node -v
 ```
 ## 테스트 서비스
