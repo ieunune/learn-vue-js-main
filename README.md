@@ -29,6 +29,38 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 ```
 
+### CLI
+``` sh
+# install (권한 문제 있는경우)
+(sudo) npm install -g @vue/cli
+# or
+(sudo) yarn global add @vue/cli
+
+# version check
+vue --version
+
+# upgrade
+npm update -g @vue/cli
+# or
+yarn global upgrade --latest @vue/cli
+```
+
+### Node Version Update (Not Support Window)
+``` sh
+1. 버전확인
+    node -v
+2. NPM 캐시 제거
+    npm cache clean -f
+3. N 모듈 설치 (노트 버전 관리)
+    npm install -g n
+4. N 모듈 사용하여 설치 (권한 필요)
+    n stable : 안정 버전
+    n latest : 최신 버전
+    n lts : lts 버전
+    n x.x.x : 특정 x.x.x 버전
+5. 업데이트 확인
+    node -v
+```
 ## 테스트 서비스
 - json 데이터 샘플제공 해주는 사이트 
     + https://jsonplaceholder.typicode.com

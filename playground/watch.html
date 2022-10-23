@@ -10,6 +10,7 @@
     <div id="app">
       <p>{{ num }}</p>
       <button v-on:click="increase">increase</button>
+      <div>{{ display }}</div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -18,6 +19,7 @@
         el: "#app",
         data: {
           num: 0,
+          display : "",
         },
         watch: {
           num: function () {
